@@ -1,4 +1,0 @@
-<resources>
-  <string name="app_name">Unsplash</string>
-  <string name="about_info">Esta es una aplicación de demostración que utiliza Jetpack Compose con la API de Unsplash</string>
-</resources>
