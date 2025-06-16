@@ -11,7 +11,11 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
@@ -31,9 +35,21 @@ fun MainScreen(
     R.drawable.bcn_parc_guell_2
   )
 
+  val search = remember { mutableStateOf("") }
+
   LazyColumn(
-    contentPadding = PaddingValues(16.dp)
+    contentPadding = PaddingValues(16.dp),
   ) {
+    item {
+      OutlinedTextField(
+        value = search.value,
+        onValueChange = { search.value = it },
+        label = { Text("Search") },
+        modifier = Modifier
+          .fillMaxWidth()
+          .padding(bottom = 16.dp)
+      )
+    }
     items(images) { image ->
         Image(
           modifier = Modifier
