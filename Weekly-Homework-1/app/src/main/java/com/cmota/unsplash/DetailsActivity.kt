@@ -16,10 +16,13 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme // Often needed for theme colors
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults // Import this
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color // Import Color
 import androidx.compose.ui.res.stringResource
 import com.cmota.unsplash.ui.DetailsScreen
 import com.cmota.unsplash.ui.theme.UnsplashTheme
@@ -36,8 +39,14 @@ class DetailsActivity : ComponentActivity() {
       UnsplashTheme {
         Scaffold(
           modifier = Modifier.fillMaxSize(),
+          containerColor = Color.Black,
           topBar = {
             TopAppBar(
+              title = {
+                Text(
+                  stringResource(R.string.app_name)
+                )
+              },
               navigationIcon = {
                 IconButton(onClick = { finish() }) {
                   Icon(
@@ -46,9 +55,11 @@ class DetailsActivity : ComponentActivity() {
                   )
                 }
               },
-              title = {
-                Text(stringResource(R.string.app_name))
-              }
+              colors = TopAppBarDefaults.topAppBarColors(
+                containerColor = Color.Black,
+                titleContentColor = Color.White,
+                navigationIconContentColor = Color.White
+              )
             )
           },
           floatingActionButton = {

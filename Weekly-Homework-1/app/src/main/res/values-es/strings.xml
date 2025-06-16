@@ -1,4 +1,8 @@
 <resources>
+  <string name="author_name">Nikita Tsekhomskiy</string>
+
+  <string name="location_bcn">Barcelona, Spain</string>
+
   <string name="app_name">Unsplash</string>
   <string name="about_info">Esta es una aplicación de demostración que utiliza Jetpack Compose con la API de Unsplash</string>
 
@@ -30,4 +34,6 @@
   <string name="info_likes_placeholder">1.8K</string>
 
   <string name="description_bcn_sagrada_familia">Vista desde la Sagrada Familia</string>
+  <string name="tag_barcelona">barcelona</string>
+  <string name="tag_spain">spain</string>
 </resources>
