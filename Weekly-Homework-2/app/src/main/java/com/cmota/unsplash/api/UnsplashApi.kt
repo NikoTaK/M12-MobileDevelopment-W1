@@ -6,8 +6,8 @@ import com.cmota.unsplash.data.search.SearchResult
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Headers
-import retrofit2.http.Query
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 private const val CLIENT_ID = "Client-ID"
 private const val ACCESS_KEY = "kO6m_gqEjnmJCdrg7uCUHirlO-u9soB6TPJ66IYXhGk"

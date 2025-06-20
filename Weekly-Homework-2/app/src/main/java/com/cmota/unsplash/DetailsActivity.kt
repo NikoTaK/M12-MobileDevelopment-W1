@@ -1,8 +1,6 @@
 package com.cmota.unsplash
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -17,23 +15,15 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
-import com.cmota.unsplash.ui.DetailsScreen
-import com.cmota.unsplash.ui.theme.UnsplashTheme
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.lifecycle.lifecycleScope
-import coil3.compose.rememberAsyncImagePainter
+import androidx.compose.ui.res.stringResource
 import com.cmota.unsplash.api.UnsplashProvider
 import com.cmota.unsplash.data.cb.UnsplashResult
 import com.cmota.unsplash.data.images.UnsplashItem
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import com.cmota.unsplash.ui.DetailsScreen
+import com.cmota.unsplash.ui.theme.UnsplashTheme
 
 class DetailsActivity : ComponentActivity() {
 
